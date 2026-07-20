@@ -1,0 +1,11 @@
+streamlit>=1.40.0
+transformers>=4.46.0
+torch
+sentencepiece
+accelerate
+protobuf
+safetensors
+tokenizers
+deep-translator
+langdetect
+pyspellchecker
