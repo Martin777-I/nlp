@@ -10,3 +10,4 @@ tokenizers==0.19.1
 deep-translator==1.11.4
 langdetect==1.0.9
 pyspellchecker==0.8.2
+pip install --upgrade pip
