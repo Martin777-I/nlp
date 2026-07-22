@@ -1,7 +1,7 @@
 import streamlit as st
 from modelos.sentimientos import analizar_sentimiento
 
-st.title("😊 Análisis de Sentimientos")
+st.title("Análisis de Sentimientos")
 
 texto = st.text_area(
     "Ingrese el texto",
@@ -21,9 +21,9 @@ if st.button("Analizar"):
         resultado = analizar_sentimiento(texto)
 
         etiquetas = {
-            "POSITIVE": "Positivo 😊",
-            "NEGATIVE": "Negativo 😠",
-            "NEUTRAL": "Neutro 😐"
+            "POSITIVE": "Positivo",
+            "NEGATIVE": "Negativo",
+            "NEUTRAL": "Neutro"
         }
 
         sentimiento = etiquetas.get(
