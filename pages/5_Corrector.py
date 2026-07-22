@@ -49,18 +49,18 @@ def corregir_texto(texto):
     return " ".join(texto_corregido), correcciones
 
 
-st.title("📝 Corrector Ortográfico")
+st.title("Corrector Ortográfico")
 st.write("Escriba o pegue un texto para revisar su ortografía.")
 
 st.divider()
 
 texto = st.text_area(
-    "✍️ Texto",
+    "Texto",
     height=220,
     placeholder="Escriba aquí su texto..."
 )
 
-if st.button("🔍 Corregir texto", use_container_width=True):
+if st.button("Corregir texto", use_container_width=True):
 
     if texto.strip() == "":
         st.warning("Ingrese un texto para analizar.")
@@ -73,7 +73,7 @@ if st.button("🔍 Corregir texto", use_container_width=True):
     col1, col2 = st.columns(2)
 
     with col1:
-        st.subheader("📄 Texto original")
+        st.subheader("Texto original")
         st.text_area(
             "",
             texto,
@@ -83,7 +83,7 @@ if st.button("🔍 Corregir texto", use_container_width=True):
         )
 
     with col2:
-        st.subheader("✅ Texto corregido")
+        st.subheader("Texto corregido")
         st.text_area(
             "",
             texto_corregido,
@@ -95,10 +95,10 @@ if st.button("🔍 Corregir texto", use_container_width=True):
     st.divider()
 
     if len(correcciones) == 0:
-        st.success("🎉 ¡Excelente! No se encontraron errores ortográficos.")
+        st.success("¡Excelente! No se encontraron errores ortográficos.")
     else:
         st.warning(f"Se encontraron **{len(correcciones)}** errores ortográficos.")
 
-        st.subheader("📋 Palabras corregidas")
+        st.subheader("Palabras corregidas")
 
         st.table(correcciones)
